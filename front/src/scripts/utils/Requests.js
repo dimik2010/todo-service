@@ -40,7 +40,6 @@ Requests.prototype.getUserItems = function (handler) {
   req.onload = function () {
     if (req.status === 200) {
       let respBody = JSON.parse(req.response);
-      console.log(respBody);
       handler(respBody);
     } else {
       alert(this.errorMessage);

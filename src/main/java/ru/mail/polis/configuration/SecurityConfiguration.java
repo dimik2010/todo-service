@@ -24,6 +24,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   private String usersQuery;
 
 
+
   @Autowired
   public SecurityConfiguration(BCryptPasswordEncoder bCryptPasswordEncoder, DataSource dataSource) {
     this.bCryptPasswordEncoder = bCryptPasswordEncoder;
@@ -43,9 +44,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
     http.authorizeRequests()
         .antMatchers("/", "/login", "/signup").permitAll()
-        .antMatchers("/items/**", "/items").authenticated()
+        .antMatchers("/items").authenticated()
         .and()
-        .formLogin()
+        .csrf().disable().formLogin()
         .loginPage("/login").failureUrl("/login?error=true")
         .defaultSuccessUrl("/items", true)
         .usernameParameter("username")
@@ -65,4 +66,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   public void configure(WebSecurity web) throws Exception {
     web.ignoring().antMatchers("/resourses/**", "/static/**", "/css/**", "/js/**", "/images/**");
   }
+
+
 }
