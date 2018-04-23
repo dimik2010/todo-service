@@ -1,0 +1,95 @@
+.todos-item {
+    border-bottom: 1px solid #e6e6e6;
+    min-height: 60px;
+    display: flex;
+    }
+
+    .todos-item_done-mark-wrap {
+        width: 60px;
+        height: 60px;
+        background: none;
+        float:left;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        align-self: center;
+        order: 1;
+        }
+        .todos-item_done-mark {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            }
+
+        .todos-item_done-mark_visible {
+            position: absolute;
+            box-sizing: border-box;
+            width: 60%;
+            height: 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: none;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            }
+    .todos-item.__done .todos-item_done-mark_visible {
+        background: url("../../img/icons/completed.png") no-repeat center;
+        border-color: #5dc2af;
+
+        }
+
+    .todos-item_text-wrap {
+        overflow: hidden;
+        position: relative;
+        align-self: flex-start;
+        flex: 1 0;
+        order: 59;
+        }
+
+        .todos-item_text {
+            resize: none;
+            width: 100%;
+            border: 0;
+            background: none;
+            color: #666;
+            font-size: 20px;
+            font-weight: 200;
+            padding: 20px 10px 20px 0;
+            outline: none;
+            box-sizing: border-box;
+            }
+    .todos-item.__done .todos-item_text {
+        text-decoration:line-through;
+        color: #ccc;
+        }
+    .todos-item_delete {
+        width: 60px;
+        height: 60px;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        float: right;
+        align-self: flex-end;
+        order: 60;
+        outline: none;
+        }
+.todos-item:hover{
+    background: #fafafa;
+    }
+    .todos-item:hover .todos-item_delete_icon {
+        opacity: 100;
+        width: 16px;
+        height: 16px;
+        background: url('../../img/icons/close.png') no-repeat 0 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        }
+.todos-item.__hidden {
+    display: none;
+    }

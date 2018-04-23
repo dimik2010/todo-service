@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Login todo page</title>
+    <link th:href="@{/styles/default.css}" rel="stylesheet">
+    <!--<link href="../static/styles/default.css" rel="stylesheet">-->
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="todos-header">
+        todos
+    </div>
+    <div class="todos-wrapper">
+        <div class="todos-login-form-wrapper">
+            <div class="todos-login-form">
+                <form th:action="@{/login}" method="post">
+                    <div class="todos-login-form_input-wrapper">
+                        <input class="todos-login-form_input" type="text" name="username" placeholder="Enter username"
+                               required>
+                    </div>
+                    <div class="todo-login-form_input-wrapper">
+                        <input class="todos-login-form_input" type="password" name="password"
+                               placeholder="Enter password"
+                               required>
+                    </div>
+                    <input class="todos-login-form_submit-button" type="submit" name="submit" value="Log in">
+                    <div class="todos-login-actions-bar">
+                        <a href="/signup" class="todos-login-actions-bar_sign-up">Sign up!</a>
+                    </div>
+                    <div class="todos-login-form_error-message" th:if="${param.error}">
+                        Invalid username or password
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

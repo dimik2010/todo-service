@@ -1,0 +1,14 @@
+.logout-href {
+    font-family:  Helvetica Neue, Arial, sans-serif;
+    font-size: 15px;
+    color : rgb(102, 102, 102);
+    background: white;
+    float: right;
+    border: 1px solid #ebdfdf;
+    border-radius: 3px;
+    margin: 15px 0;
+    padding: 10px;
+    }
+    .logout-href:hover {
+        background: #e5e5e5;
+        }

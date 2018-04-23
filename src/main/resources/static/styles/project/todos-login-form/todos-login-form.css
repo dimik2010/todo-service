@@ -1,0 +1,53 @@
+.todos-login-form-wrapper {
+    padding: 10px;
+
+    }
+
+    .todos-login-form {
+        /*justify-content: center;*/
+        margin: 0 auto;
+        width: 280px;
+        position: relative;
+        }
+
+        .todos-login-form_input-wrapper {
+            margin: 5px auto;
+            }
+
+        .todos-login-form_submit-button {
+            width: 100px;
+            margin: 10px auto;
+            position: relative;
+            float: right;
+            }
+
+
+
+        .todos-login-form_error-message {
+            color: RED;
+            margin: 10px auto;
+            text-align: center;
+            }
+        .todos-login-form_sucsess-message {
+            color: GREEN;
+            margin: 10px auto;
+            text-align: center;
+            }
+
+        .todos-login-form_input {
+            outline: none;
+            border: 2px solid #ebdfdf;
+            border-radius: 5%;
+            padding: 3px;
+            width: 274px;
+            }
+
+    .todos-login-actions-bar {
+        width: 280px;
+        margin: 10px auto;
+        padding: 3px;
+        }
+        .todos-login-actions-bar_sign-up {
+            width: 50px;
+            margin: 0 auto;
+            }

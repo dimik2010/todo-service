@@ -1,0 +1,26 @@
+.todos-wrapper {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    position: relative;
+    }
+
+    .todos-wrapper:after, .todos-wrapper:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+        z-index: -1;
+        }
+
+        .todos-wrapper:before {
+            height: 10px;
+            left: 4px;
+            right: 4px;
+            }
+
+        .todos-wrapper:after {
+            height: 5px;
+            left: 2px;
+            right: 2px;
+            }

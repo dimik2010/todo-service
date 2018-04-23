@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF8">
+    <title>TODOS</title>
+    <link href="../src/styles/default.css" rel="stylesheet"/>
+    <script src="./dist/scripts/bundle.js"></script>
+</head>
+
+<script type = "text/html" id="template">
+    <div class="todos-item">
+        <div class="todos-item_done-mark-wrap">
+            <div class="todos-item_done-mark_visible"></div>
+            <input class="todos-item_done-mark" type="checkbox" aria-label="Mark item as done"/>
+        </div>
+        <button class="todos-item_delete" aria-label="Delete item">
+            <div class="todos-item_delete_icon"></div>
+        </button>
+        <div class="todos-item_text-wrap" >
+            <div class="todos-item_text" contenteditable="true"></div>
+        </div>
+    </div>
+</script>
+
+<body>
+<div class="main-wrapper">
+    <div class="todos-header">
+        todos
+    </div>
+    <div class="todos-wrapper">
+        <div class="todos-input">
+            <button class="todos-input_select-all" aria-label="Mark all activities as done">
+                <div class="todos-input_select-all_icon"></div>
+            </button>
+            <div class="todos-input_input-text-wrap">
+                <input class="todos-input_input-text" placeholder="What needs to be done?"
+                       aria-label="Field for input your activities"/>
+            </div>
+        </div>
+        <div class="todos-items-list">
+
+        </div>
+
+        <div class="todos-status-bar">
+            <button class="todos-status-bar_delete-completed" aria-label="Delete completed items">
+                Delete completed
+            </button>
+            <div class="todos-status-bar_counter" aria-label="Number of undone tasks">
+                0 tasks to do
+            </div>
+            <div class="todos-status-bar_filters">
+                <button class="todos-status-bar_filters_filter __active" aria-label="Show all items" data-filter="all">
+                    <div class="button-text">All</div>
+                </button>
+                <button class="todos-status-bar_filters_filter" aria-label="Show done items" data-filter="all">
+                    <div class="button-text">Active</div>
+                </button>
+                <button class="todos-status-bar_filters_filter" aria-label="Show undone items" data-filter="all">
+                    <div class="button-text">Completed</div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
